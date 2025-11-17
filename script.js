@@ -72,6 +72,16 @@ function render() {
         gameOverModal.style.display = "flex"
         return
     }
+    
+    //self collision logic
+    if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+    clearInterval(intervalId)
+
+    modal.style.display = "flex"
+    startGameModal.style.display = "none"
+    gameOverModal.style.display = "flex"
+    return
+}
 
    
 
