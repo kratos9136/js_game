@@ -44,7 +44,7 @@ for (let row = 0; row < rows; row++) {
         block.classList.add("block")
         board.appendChild(block);
         
-        blocks[`${row}-${col}`] = block
+        blocks[`${row}-${col}`] = block;
     }
 }
 
@@ -70,8 +70,10 @@ function render() {
         modal.style.display = "flex"
         startGameModal.style.display = "none"
         gameOverModal.style.display = "flex"
-        return;
+        return
     }
+
+   
 
     // food consume logic
     if(head.x == food.x && head.y == food.y) {
@@ -129,6 +131,7 @@ startButton.addEventListener("click",() => {
 restartButton.addEventListener("click",restartGame)
 
 function restartGame(){
+    
 
     blocks[`${food.x}-${food.y}`].classList.remove("food")
     snake.forEach(segment => {
@@ -138,7 +141,9 @@ function restartGame(){
     score = 0
     time = `00-00`
 
-    scoreElement.innerText = highScore
+    scoreElement.innerText = score
+    timeElement.innerText = time
+    highScoreElement.innerText = highScore
 
 
 
