@@ -93,6 +93,7 @@ section .infos{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
     grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+    
      
 }
 
@@ -115,7 +116,9 @@ section .infos{
     height: 100vw;
     width:100vw;
     position: fixed;
-    top: 0;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
     background-color:#35353587;
     backdrop-filter: blur(4px);
     display: flex;
@@ -128,6 +131,7 @@ section .infos{
     display: flex;
     flex-direction: column;
     align-items:center;
+    
     gap: var(--space-lg);
 
 }
